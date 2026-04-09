@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  musetalk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: musetalk:latest
+    container_name: musetalk
+    ports:
+      - "8000:8000"
+      - "7860:7860"
+    volumes:
+      - ./models:/app/models:ro
+      - ./results:/app/results
+      - ./data:/app/data:ro
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
