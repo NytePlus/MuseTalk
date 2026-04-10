@@ -17,6 +17,7 @@ mkdir %CheckpointsDir%\whisper
 pip install -U "huggingface_hub[hf_xet]"
 
 :: Set HuggingFace endpoint
+set "PATH=C:\Users\Nyte\AppData\Roaming\Python\Python38\Scripts;%PATH%"
 set HF_ENDPOINT=https://hf-mirror.com
 
 :: Download MuseTalk weights

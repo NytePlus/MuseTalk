@@ -18,3 +18,7 @@ imageio[ffmpeg]
 omegaconf
 ffmpeg-python
 moviepy
+
+fastapi
+uvicorn[standard]
+

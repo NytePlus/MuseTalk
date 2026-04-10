@@ -177,6 +177,7 @@ pip install -r requirements.txt
 Install the MMLab ecosystem packages:
 
 ```bash
+conda install -c conda-forge chumpy -y
 pip install --no-cache-dir -U openmim
 mim install mmengine
 mim install "mmcv==2.0.1"

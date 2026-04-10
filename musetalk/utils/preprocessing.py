@@ -46,10 +46,10 @@ def get_bbox_range(img_list,upperbondrange =0):
     batches = [frames[i:i + batch_size_fa] for i in range(0, len(frames), batch_size_fa)]
     coords_list = []
     landmarks = []
-    if upperbondrange != 0:
-        print('get key_landmark and face bounding boxes with the bbox_shift:',upperbondrange)
-    else:
-        print('get key_landmark and face bounding boxes with the default value')
+    # if upperbondrange != 0:
+    #     print('get key_landmark and face bounding boxes with the bbox_shift:',upperbondrange)
+    # else:
+    #     print('get key_landmark and face bounding boxes with the default value')
     average_range_minus = []
     average_range_plus = []
     for fb in tqdm(batches):
@@ -87,10 +87,10 @@ def get_landmark_and_bbox(img_list,upperbondrange =0):
     batches = [frames[i:i + batch_size_fa] for i in range(0, len(frames), batch_size_fa)]
     coords_list = []
     landmarks = []
-    if upperbondrange != 0:
-        print('get key_landmark and face bounding boxes with the bbox_shift:',upperbondrange)
-    else:
-        print('get key_landmark and face bounding boxes with the default value')
+    # if upperbondrange != 0:
+    #     print('get key_landmark and face bounding boxes with the bbox_shift:',upperbondrange)
+    # else:
+    #     print('get key_landmark and face bounding boxes with the default value')
     average_range_minus = []
     average_range_plus = []
     for fb in tqdm(batches):
